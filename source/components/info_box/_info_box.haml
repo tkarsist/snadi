@@ -1,0 +1,31 @@
+---
+info_box:
+  title: "info-box otsikko"
+  footer_link: "#"
+  footer_link_label: "info-box footer linkki"
+  footer_text: "info-box footer teksti"
+  show_more_label: "Näytä lisää"
+  rows:
+    -
+      label: "Otsikko 1"
+      value: "Arvo 1"
+    -
+      label: "Otsikko 2"
+      value: "Arvo 2"
+---
+%div{:class => ['info-box', position]}
+  %h1{:class => "open"} 
+    =data.page.info_box.title
+  .box-content
+    %ul
+      - data.page.info_box.rows.each do |row|
+        %li
+          .item-type=row.label
+          .item-value=row.value
+    %a{:href => "#", :class => "show-more", :title => data.page.info_box.show_more_label || ""}
+      =data.page.info_box.show_more_label
+    .change-details
+      %a{:href => data.page.info_box.footer_link || "#", :title => data.page.info_box.footer_link_label || ""}
+        =data.page.info_box.footer_link_label
+      .send-details-by-email 
+        =data.page.info_box.footer_text

@@ -1,0 +1,34 @@
+---
+title: "Styleguide - Hero"
+half_heros:
+  -
+   hero:
+     img: "images/test_img/5.jpg"
+     title: "Reissuexceli"
+     text: "Calculate all your trip expences" 
+  -
+   hero:
+     img: "images/test_img/5.jpg"
+     title: "Kerava Weather"
+     link: "index.html"
+     text: "Live weather statistics from Kerava"  
+text_blocks:
+  -
+   text_block:
+     title: '<i>"Everything goes well if you do it yourself"</i>'
+     text: "-Veikonkala" 
+
+---
+
+=partial('components/site-elements/header', :locals => {:selected => "StyleGuide"})
+.section
+  =partial('components/site-elements/styleguidenav', :locals => {:selected => "Half-Hero"})
+
+.section
+  %h1
+    Half-Hero
+  %p
+    Half-Hero is lesser Hero
+  %br  
+
+=partial "components/half_hero/half_hero"

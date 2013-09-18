@@ -1,0 +1,24 @@
+---
+title: "Styleguide - Hero"
+heros:
+  -
+   hero:
+     img: "images/test_img/hero16_9.jpg"
+     title: "HERO"
+     text: "Hero text"
+     link: "#" 
+
+---
+
+=partial('components/site-elements/header', :locals => {:selected => "StyleGuide"})
+.section
+  =partial('components/site-elements/styleguidenav', :locals => {:selected => "Hero"})
+
+.section
+  %h1
+    Hero
+  %p
+    Hero component that can be used in the top of the pages
+  %br  
+
+=partial "components/hero/hero"

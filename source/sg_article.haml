@@ -1,0 +1,36 @@
+---
+title: "Frontpage"
+description: "Prototype with components - "
+articles:
+  -
+   article:
+     body: '<h1>Kaisan kalaverkko</h1>
+<p><img alt="" src="images/test_img/5.jpg"/></p>
+<p>Kuumaa kamaa</p>
+<h2>hookaks</h2>
+<h3>hookolme</h3>
+<p>Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala <img alt="" src="images/test_img/5.jpg" class="img-right" />on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras Veikonkala on paras </p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue diam tellus, eu malesuada dolor sodales eget. Pellentesque aliquam  lobortis odio hendrerit  lobortis odio hendrerit  lobortis odio hendrerit  lobortis odio hendrerit  lobortis odio hendrerit  lobortis odio hendrerit  lobortis odio hendrerit imperdiet nisi, vel egestas leo vulputate at. <img alt="" src="images/test_img/5.jpg" class="img-left" />Proin feugiat porttitor erat, ut lobortis odio hendrerit ac. Sed lobortis justo sit amet commodo tempus. Vivamus viverra sagittis urna nec volutpat. Donec hendrerit tempus enim, non laoreet lacus vestibulum a. Integer nec vestibulum urna, in mattis mi. Nam ut arcu in libero consectetur lobortis eu eu dolor. Nullam sollicitudin lacinia risus, vel consequat neque egestas et. In fermentum dui vel tempor laoreet. Nullam vulputate interdum interdum. Mauris a aliquet nisl, non consequat sapien. Nullam et rutrum odio. Duis dapibus metus sit amet ipsum tristique, vitae ornare leo tempus. Donec pellentesque, justo id ullamcorper egestas, libero dui ornare orci, vel posuere mi nisl quis justo. Etiam lorem risus, sodales ac luctus et, faucibus non mi.</p>
+<p><strong>boldi</strong></p>
+<p>&nbsp;</p>
+<p><em>italialaista tekstia</em></p>
+<p>kuva kohta</p>
+<p>&nbsp;</p>
+<p>lista:</p>
+<ol><li>yksi</li><li>kaksi&nbsp;</li><li>kolme</li></ol>
+<p>Lista 2:</p>
+<ul><li>onki</li><li>vapa</li><li>jorma</li></ul>
+<img alt="" src="images/test_img/5.jpg" style="float:right" />
+<p>&nbsp;</p>
+<blockquote>Ihanaa blockquiote<cite>Veikonkala</cite></blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer congue diam tellus, eu malesuada dolor sodales eget. Pellentesque aliquam  lobortis odio hendrerit  lobortis odio hendrerit  lobortis odio hendrerit  lobortis odio hendrerit  lobortis odio hendrerit  lobortis odio hendrerit  lobortis odio hendrerit imperdiet nisi, vel egestas leo vulputate at. <img alt="" src="images/test_img/5.jpg" class="img-left" />Proin feugiat porttitor erat, ut lobortis odio hendrerit ac. Sed lobortis justo sit amet commodo tempus. Vivamus viverra sagittis urna nec volutpat. Donec hendrerit tempus enim, non laoreet lacus vestibulum a. Integer nec vestibulum urna, in mattis mi. Nam ut arcu in libero consectetur lobortis eu eu dolor. Nullam sollicitudin lacinia risus, vel consequat neque egestas et. In fermentum dui vel tempor laoreet. Nullam vulputate interdum interdum. Mauris a aliquet nisl, non consequat sapien. Nullam et rutrum odio. Duis dapibus metus sit amet ipsum tristique, vitae ornare leo tempus. Donec pellentesque, justo id ullamcorper egestas, libero dui ornare orci, vel posuere mi nisl quis justo. Etiam lorem risus, sodales ac luctus et, faucibus non mi.</p>'
+#= YAML.load(File.read("#{File.basename(__FILE__,'.haml')}.yml"))
+---
+=partial('components/site-elements/header', :locals => {:selected => "StyleGuide"})
+.section
+  =partial('components/site-elements/styleguidenav', :locals => {:selected => "Article"})
+
+=partial "components/article/article"
+
+
+

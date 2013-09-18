@@ -1,0 +1,23 @@
+---
+title: "Styleguide - Hero"
+text_blocks:
+  -
+   text_block:
+     title: '<i>"Everything goes well if you do it your self"</i>'
+     text: "-Veikonkala" 
+
+---
+
+=partial('components/site-elements/header', :locals => {:selected => "StyleGuide"})
+.section
+  =partial('components/site-elements/styleguidenav', :locals => {:selected => "Text block"})
+
+.section
+  %h1
+    Text Block
+  %p
+    Text block can be used to break the flow on the page.
+  %br  
+
+=partial "components/text_block/text_block"
+=partial("components/text_block/text_block", :locals => {:color => "blue-bg"})

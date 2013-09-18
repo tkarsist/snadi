@@ -1,0 +1,74 @@
+.wide-box {
+  background: none repeat scroll 0 0 #ffffff;
+
+	//Timo K special hack
+	//width:48.8%;	
+	@include span-columns(6,12);
+	@include nth-omega(2n);
+	position:relative;
+	float:left;
+	//clear:both;
+	overflow:hidden;
+	//display:none;
+	//height:12em;
+
+  img {
+  	width:48.770491803278700%;//oikea on 48.7
+  	position:relative;
+  	float:left;
+  }
+  
+  .right {
+    width:48.770491803278700%; //oikea on 48.77
+    position:relative;
+    float:right;
+  }
+  
+  .copy {
+    width:51.22950819672130000%;
+    float:left;
+  }
+
+}
+
+@media #{$tablet-portrait} {
+
+  .wide-box {
+    .copy {
+        font-size:1em;
+    }    
+  }
+
+}
+
+@media #{$mobile-portrait} {
+
+  .wide-box {
+    //Timo K special hack
+    //width:98.8%;
+    @include span-columns(12 omega,12);
+  	
+    background: none;
+    padding-bottom:1em;
+    
+    img {
+      width:100%;
+    }
+    
+    .right {
+      width:100%;
+    }
+    
+    .copy {
+      width:100%;
+      position: absolute;
+    //left:0.3em;
+      background-color:rgb(255,255,255);
+      background-color:rgba(255,255,255,0.7);
+      display:block;
+      top:1em;
+    //right:0.5em;
+    }    
+  }
+
+}

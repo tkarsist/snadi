@@ -1,0 +1,73 @@
+@mixin get-fonts($size, $padding, $margin){
+	font-size: #{$size}em;
+	padding-left: #{$padding/$size}em;
+	padding-right: #{$padding/$size}em;
+
+	margin-left:#{$margin/$size}em;
+	margin-right:#{$margin/$size}em;
+
+	
+
+}
+
+@mixin get-gradient($maincolor){
+  $gradient-end:lighten($maincolor,3%);
+  $gradiend-start:darken($maincolor,8%);
+  
+  $grad1_percent:2%;
+  $grad2_percent:70%;
+  $grad3_percent:98%;
+  $grad1_dec:0.02;
+  $grad2_dec:0.7;
+  $grad3_dec:0.98;
+
+  background: $maincolor;
+  
+  background-image: linear-gradient(bottom, $gradiend-start $grad1_percent, $maincolor $grad2_percent, $gradient-end $grad3_percent);
+  background-image: -o-linear-gradient(bottom, $gradiend-start $grad1_percent, $maincolor $grad2_percent, $gradient-end $grad3_percent);
+  background-image: -moz-linear-gradient(bottom, $gradiend-start $grad1_percent, $maincolor $grad2_percent, $gradient-end $grad3_percent);
+  background-image: -webkit-linear-gradient(bottom, $gradiend-start $grad1_percent, $maincolor $grad2_percent, $gradient-end $grad3_percent);
+  background-image: -ms-linear-gradient(bottom, $gradiend-start $grad1_percent, $maincolor $grad2_percent, $gradient-end $grad3_percent);
+
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop($grad1_dec, $gradiend-start),
+  color-stop($grad2_dec, $maincolor),
+  color-stop($grad3_dec, $gradient-end)
+  );
+
+}
+
+
+@mixin get-shadow($maincolor){
+  $gradient-end:$maincolor;
+  $gradiend-start:$maincolor;
+  $maincolor:darken($maincolor,20%);
+  
+  $grad1_percent:2%;
+  $grad2_percent:50%;
+  $grad3_percent:98%;
+  $grad1_dec:0.02;
+  $grad2_dec:0.7;
+  $grad3_dec:0.98;
+
+  background: $maincolor;
+  
+  background-image: linear-gradient(bottom, $gradiend-start $grad1_percent, $maincolor $grad2_percent, $gradient-end $grad3_percent);
+  background-image: -o-linear-gradient(bottom, $gradiend-start $grad1_percent, $maincolor $grad2_percent, $gradient-end $grad3_percent);
+  background-image: -moz-linear-gradient(bottom, $gradiend-start $grad1_percent, $maincolor $grad2_percent, $gradient-end $grad3_percent);
+  background-image: -webkit-linear-gradient(bottom, $gradiend-start $grad1_percent, $maincolor $grad2_percent, $gradient-end $grad3_percent);
+  background-image: -ms-linear-gradient(bottom, $gradiend-start $grad1_percent, $maincolor $grad2_percent, $gradient-end $grad3_percent);
+
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop($grad1_dec, $gradiend-start),
+  color-stop($grad2_dec, $maincolor),
+  color-stop($grad3_dec, $gradient-end)
+  );
+
+}

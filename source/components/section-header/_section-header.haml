@@ -1,0 +1,12 @@
+---
+section_title: "veikonkala.org"
+section_text: "Where things happen."
+
+---
+%div{:class=>['section-header', data.page.section_color||"" ]}
+  .section
+    %div{:class =>'copy'}
+      -if data.page.section_image!=nil
+        %img{:src=>"#{data.page.section_image}"}
+      %h1= data.page.section_title
+      %p= data.page.section_text

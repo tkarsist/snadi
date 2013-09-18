@@ -1,0 +1,27 @@
+---
+navitems:
+  -
+   navitem:
+     title: "Etusivu"
+     link: "index.html"
+  -
+   navitem:
+     title: "Sivu2"
+     link: "page2.html"     
+---
+%header
+  .header
+    -if !defined? noNav
+      .nav-container
+        %nav.section
+          %ul
+            - data.navigation.navitems.each do |s|
+              -if selected == s.navitem.title
+                %li{:class => 'selected'}
+                  =link_to s.navitem.title, s.navitem.link, :relative =>true
+              -else
+                %li
+                  =link_to s.navitem.title, s.navitem.link, :relative =>true
+    -if data.page.section_title!=nil
+      =partial("components/section-header/section-header", :locals => {:color => "orange-bg"})
+

@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#vekaVideosContainer").load("test.html"),$("a.hideShowAllVideosLink").click(function(){return $("#vekaYoutubeChannelContainer").toggleClass("all"),!0})});

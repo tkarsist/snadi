@@ -1,0 +1,18 @@
+---
+text_blocks:
+  -
+   text_block:
+     title: "Big heros2"
+     text: "supa huba doo" 
+  -
+   text_block:
+     title: "Kingis on hyvää"
+     text: "..syö sinäkin" 
+---
+%div{:class=>['group','text-block-wrapper', defined?(color) ? color : nil ]}
+  .section
+    - data.page.text_blocks.each do |s|
+      %div{:class =>['text-block']}
+        %div{:class =>'copy'}
+          %h2=s.text_block.title
+          %p=s.text_block.text

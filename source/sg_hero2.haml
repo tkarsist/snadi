@@ -1,0 +1,26 @@
+---
+title: "Styleguide - Hero"
+heros2:
+  -
+   hero:
+     img: "images/test_img/hero16_9.jpg"
+     title: "Is there anything that we can really do?"
+     label: "Forest safety"
+     time: "9:27"
+     text: "The forest keeps on groing and fast"
+     link: "#" 
+
+---
+
+=partial('components/site-elements/header', :locals => {:selected => "StyleGuide"})
+.section
+  =partial('components/site-elements/styleguidenav', :locals => {:selected => "Hero2"})
+
+.section
+  %h1
+    Hero2
+  %p
+    Hero2 component that can be used in the top of the pages
+  %br  
+
+=partial "components/hero2/hero2"

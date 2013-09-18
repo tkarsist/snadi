@@ -1,0 +1,32 @@
+---
+heros2:
+  -
+   hero:
+     img: "images/test_img/5.jpg"
+     title: "Big heros2"
+     label: "New"
+     text: "supa huba doo" 
+  -
+   hero:
+     img: "images/test_img/2.jpg"
+     title: "Kingis on hyvää"
+     link: "index.html"
+     text: "..syö sinäkin" 
+---
+%div{:class=>['group', defined?(color) ? color : nil ]}
+  .section
+    - data.page.heros2.each do |s|
+      %div{:class =>['hero2', 'box']}
+        %a{:href =>s.hero.link || "#"}
+          %img{:src =>s.hero.img}
+          %div{:class =>'copy'}
+            -if s.hero.label!=nil
+              .label
+                %span.topic
+                  =s.hero.label
+                -if s.hero.time!=nil
+                  %span.time
+                    =s.hero.time
+            %p=s.hero.text || "heros.hero.text"
+            %h2=s.hero.title || "heros.hero.title"
+

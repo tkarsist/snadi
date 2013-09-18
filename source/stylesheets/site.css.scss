@@ -1,0 +1,35 @@
+//own variables and mixins
+@import "_base/variables";
+@import "_mixins/mixins";
+
+//html5 boilerplate templates .. comment these out if you enable bootstrap
+@import "_vendor/normalize";
+@import "_vendor/html5bp";
+
+//enable bootstrap. The files will reside in the gem folder e.g. ~/.rvm/gems/ruby-1.9.3-p392/gems/bootstrap-sass-2.3.0.1/vendor/assets/stylesheets/
+//the mixins and helpers are there
+//please comment also from the Gemfile the boot-strap line
+//@import "bootstrap";
+//@import "bootstrap-responsive";
+
+//Timok Hack
+@import "susy";
+
+
+//own stuff
+@import "_base/base";
+@import "_base/fonts";
+@import "_shared/shared_component";
+@import "_components/section_header";
+@import "_components/hero";
+@import "_components/half_hero";
+@import "_components/wide_box";
+@import "_components/square_box";
+@import "_components/split_promo";
+@import "_components/header";
+@import "_components/hero2";
+@import "_components/text_block";
+@import "_components/article";
+@import "_components/veka_youtube";
+
+

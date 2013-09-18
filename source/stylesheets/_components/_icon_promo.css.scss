@@ -1,0 +1,55 @@
+.right-column{
+	@include span-columns(3 omega);
+}
+.right-column.last {
+    display: none;
+}
+
+.icon-promo {
+    margin: 0 $default-margin $default-margin 0;
+    padding: 0 0 $default-margin 0;
+    border-bottom: 1px dashed #e6e6e6;
+
+    h1 {
+        color: $postalblue;
+        display: inline-block;
+        @include ie-inline-block;
+    }
+}
+
+@include at-breakpoint($tablet) {
+    .right-column {
+        @include span-columns(9);
+        margin-top: $default-margin;
+        display: none;
+    }
+
+    .right-column.last {
+        display: inherit;
+        @media (max-height: $mobile-height) {
+            display: none;
+        }
+    }
+    .right-column.first {
+        display: none;
+    }
+
+    .icon-promo {
+        @include span-columns(3);
+        min-height: 8em;
+
+        &:last-of-type {
+            @include span-columns(3 omega);
+        }
+    }
+
+    .icon-promo.last {
+        @include span-columns(3 omega);
+    }
+}
+
+@include at-breakpoint($mobile) {
+    .right-column.last, .right-column.first {
+        display: none;
+    }
+}

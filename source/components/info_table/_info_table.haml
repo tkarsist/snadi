@@ -1,0 +1,40 @@
+---
+info_table:
+  title: "info-table otsikko"
+  orders:
+    -
+      order:
+        type: "palvelu 1"
+        address1: "osoite 1"
+        period: "ma 31.12.2012 - su 27.1. 2013"
+        reorderable: true
+    -
+      order:
+        type: "palvelu 2"
+        address1: "osoite 2"
+        period: "ma 31.12.2012 - su 27.1. 2013"
+        reorderable: true
+---
+%div{:class => ['info-table']}
+  %h1
+    =data.page.info_table.title
+  .box-content
+    - if data.page.info_table.empty?
+      %p 
+        =data.page.info_table.title_no_orders
+    - else
+      .orders
+        - data.page.info_table.orders.each_with_index do |service, i|
+          .order{:class => [("even" if (i+1).even?)]}
+            .column
+              %strong=service.order.type
+            .column=service.order.period
+            .column=service.order.address1
+            - if service.order.address2
+              .column=service.order.address2
+            - else
+              .column{:class => "empty"}
+            .column
+              - if service.order.reorderable
+                %a{:href => "#", :title => data.page.info_table.re_order_label} 
+                  =data.page.info_table.re_order_label

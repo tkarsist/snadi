@@ -1,0 +1,23 @@
+---
+square_boxes:
+  -
+   square_box:
+     img: "images/test_img/5.jpg"
+     title: "Big hero2"
+     text: "supa huba doo" 
+  -
+   square_box:
+     img: "images/test_img/2.jpg"
+     title: "Kingis on hyvää"
+     text: "..syö sinäkin"
+     link: "index.html" 
+---
+%div{:class=>['group', defined?(color) ? color : nil ]}
+  .section
+    - data.page.square_boxes.each do |s|
+      %div{:class =>['square-box', 'box']}
+        %a{:href =>s.square_box.link || "#"}
+          %img{:src =>s.square_box.img}
+          %div{:class =>'copy'}
+            %h2=s.square_box.title || "square_boxes.square_box.title"
+            %p=s.square_box.text || "square_boxes.square_box.text"

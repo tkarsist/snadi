@@ -1,0 +1,41 @@
+---
+title: "Styleguide"
+square_boxes:
+  -
+   square_box:
+     img: "images/test_img/1.jpg"
+     title: "Square1"
+     text: "supa huba doo"
+     link: "#"
+  -
+   square_box:
+     img: "images/test_img/2.jpg"
+     title: "Square2"
+     text: "supa huba doo"
+     link: "#" 
+  -
+   square_box:
+     img: "images/test_img/3.jpg"
+     title: "Square3"
+     text: "supa huba doo"
+     link: "#" 
+  -
+   square_box:
+     img: "images/test_img/4.jpg"
+     title: "Square4"
+     text: "supa huba doo"
+     link: "#"
+     
+---
+
+=partial('components/site-elements/header', :locals => {:selected => "StyleGuide"})
+.section
+  =partial('components/site-elements/styleguidenav', :locals => {:selected => "Square-box"})
+
+.section
+  %h1
+    Square-Box
+  %p
+    Small promobox to that promote something simple
+  %br
+=partial "components/square-box/square-box"

@@ -1,0 +1,85 @@
+.article{
+  width:100%;
+  .article-body{
+    padding-left:1.5em;
+    padding-right:1.5em;
+    padding-top:1.5em;
+
+    p{
+      padding-top:0.8em;
+    }
+    h1{
+      border-bottom: 1px solid;
+      padding-bottom:0.3em;
+    }
+
+    .img-right{
+      float:right;
+      display:inline;
+      width:40%;
+      padding:0.8em;
+    }
+    .img-left{
+      float:left;
+      display:inline;
+      width:40%;
+      padding:0.8em;
+
+    }
+    img{
+      //padding:0.5em;
+      padding-top:0.5em;
+      padding-bottom:0.5em;
+      padding-left:-0.5em;
+      padding-right:-0.5em;
+    }
+    ol,ul{
+      padding:2.3em;
+    }
+    blockquote{
+      display:block;
+      float:right;
+      position:relative;
+      padding-left:4em;
+      //padding-top:1.5em;
+      //padding-left:1em;
+      margin-left:4em;
+      background-color:darken($bgcolor,10%);
+      @include get-fonts(1.5,2.5,0);
+      padding-top:0.5em;
+      padding-bottom:0.5em;
+
+    }
+    blockquote:before{
+      content: "\201C";
+      display:block;
+      margin:0;
+      padding:0;
+      padding-left:-1em;
+      position:absolute;
+      font-size:2em;
+      top:-0em;
+      left: 0.2em;
+    }
+    cite:before{
+      content: "\2014 \2009";
+
+    }
+    cite{
+      position:relative;
+      display:block;
+      @include get-fonts(0.8,0.5,0);
+
+    }
+  }
+}
+
+@media #{$tablet-portrait} {
+
+}
+
+@media #{$mobile-portrait} {
+
+
+}
+

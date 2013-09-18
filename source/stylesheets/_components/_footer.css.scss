@@ -1,0 +1,33 @@
+footer {
+  @include span-columns(12);
+  border-top: 3px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+  margin: 2*$default-margin 0px;
+  font-size: 0.9em;
+
+  ul {
+    list-style-type: none;
+    padding: $default-margin/2;
+  }
+
+  li {
+    display: inline-block;
+    min-width: 21%;
+    @include ie-inline-block;
+  }
+
+  a {
+    color: #AAAAAA;
+  }
+}
+
+@include #{$mobile-portrait} {
+  footer {
+    display: none;
+    font-size: 1em;
+    li {
+      display: block;
+      margin-bottom: $default-margin;
+    }
+  }
+}

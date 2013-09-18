@@ -1,0 +1,137 @@
+.info-box.first {
+    display: none;
+}
+
+.info-box {
+    $border-color: #c4d7ec;
+
+    @include span-columns(6); 
+    @include accordion-item;
+
+    border: 1px solid $border-color; // TODO: fix, messes up layout
+    border-radius: $border-radius;
+
+    ul {
+        list-style-type:none;
+        padding: 0px 5px 5px 13px;
+    }
+
+    li {
+        margin-bottom: 0.5em;
+    }
+
+    .item-type {
+        color: $postalblue;
+        font-weight: bold;
+        display: inline-block;
+        min-width: 100px;
+    }
+
+    .item-value {
+        display: inline-block;
+        @include ie-inline-block;
+        overflow-wrap:break-word;
+    }
+
+    .show-more {
+        padding: 10px 0px;
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.2em;
+        color: #215ba6;
+        margin-bottom: $default-margin;
+        padding: $default-margin/2;
+        border-bottom: 1px solid $border-color;
+
+        background-image: linear-gradient(bottom, rgb(186,209,230) 20%, rgb(255,255,255) 90%);
+        background-image: -o-linear-gradient(bottom, rgb(186,209,230) 20%, rgb(255,255,255) 90%);
+        background-image: -moz-linear-gradient(bottom, rgb(186,209,230) 20%, rgb(255,255,255) 90%);
+        background-image: -webkit-linear-gradient(bottom, rgb(186,209,230) 20%, rgb(255,255,255) 90%);
+        background-image: -ms-linear-gradient(bottom, #bad1e6 20%, #ffffff 90%);
+        background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.2, rgb(186,209,230)),
+            color-stop(0.9, rgb(255,255,255))
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bad1e6', endColorstr='#ffffff');
+
+        border-radius:$border-radius $border-radius 0px 0px;
+    }
+
+    .change-details {
+        padding: 8px 13px;
+        border-top: 1px solid $border-color;
+        border-radius: 0px 0px $border-radius $border-radius;
+        background-image: linear-gradient(bottom, rgb(237,243,251) 34%, rgb(255,255,255) 72%);
+        background-image: -o-linear-gradient(bottom, rgb(237,243,251) 34%, rgb(255,255,255) 72%);
+        background-image: -moz-linear-gradient(bottom, rgb(237,243,251) 34%, rgb(255,255,255) 72%);
+        background-image: -webkit-linear-gradient(bottom, rgb(237,243,251) 34%, rgb(255,255,255) 72%);
+        background-image: -ms-linear-gradient(bottom, rgb(237,243,251) 34%, rgb(255,255,255) 72%);
+        background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0.34, rgb(237,243,251)),
+            color-stop(0.72, rgb(255,255,255))
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edf3fb', endColorstr='#ffffff') !important;
+
+        .send-details-by-email {
+            display: inline-block;
+            @include ie-inline-block;
+        }
+
+        a {
+            background-image: url("../images/arrow_right_orange.gif");
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            padding: 0px 30px 0px 10px;
+        }
+    }
+}
+
+@include at-breakpoint($tablet) {
+    .info-box {
+        @include span-columns(6 omega);
+    }
+}
+@include at-breakpoint($mobile) {
+    .info-box {
+        @include span-columns(6);
+
+        ul {
+            height: 8.3em;
+            overflow: hidden;
+        }
+
+        .item-value {
+            display: block;
+        }
+
+        .change-details {
+
+            .send-details-by-email {
+                display: none;
+            }
+        }
+
+        .box-content {
+            display: inherit;
+        }
+
+        .show-more {
+            display: inherit;
+        }
+    }
+    .info-box.last {
+        display: none;
+    }
+
+    .info-box.first {
+        display: inherit;
+    }
+}

@@ -1,0 +1,78 @@
+--- 
+title: "Content Model"
+description: "Prototype with components - "
+heros:
+  -
+   hero:
+     img: "http://dummyimage.com/1000x16:9/ccc/fff.png&text=PROMO.Image%2016:9"
+     title: "PROMO.Title"
+     text: "PROMO.Text"
+     link: "page2.html" 
+     
+wide_boxes:
+  -
+   wide_box:
+     img: "http://dummyimage.com/400x400/ccc/fff.png&text=PROMO.Image%201:1"
+     title: "PROMO.Title"
+     text: "PROMO.Text"
+     link: "#" 
+  -
+   wide_box:
+     img: "http://dummyimage.com/400x400/ccc/fff.png&text=PROMO.Image%201:1"
+     type: "right"
+     title: "PROMO.Title"
+     text: "PROMO.Text"
+     link: "#"
+     
+square_boxes:
+  -
+   square_box:
+     img: "http://dummyimage.com/400x400/ccc/fff.png&text=PROMO.Image%201:1"
+     title: "PROMO.Title"
+     text: "PROMO.Text"
+     link: "#" 
+  -
+   square_box:
+     img: "http://dummyimage.com/400x400/ccc/fff.png&text=PROMO.Image%201:1"
+     title: "PROMO.Title"
+     text: "PROMO.Text"
+     link: "#" 
+  -
+   square_box:
+     img: "http://dummyimage.com/400x400/ccc/fff.png&text=PROMO.Image%201:1"
+     title: "PROMO.Title"
+     text: "PROMO.Text"
+     link: "#" 
+  -
+   square_box:
+     img: "http://dummyimage.com/400x400/ccc/fff.png&text=PROMO.Image%201:1"
+     title: "PROMO.Title"
+     text: "PROMO.Text"
+     link: "#"
+     
+split_promos:
+  -
+   split_promo:
+     title: "PROMO.Title"
+     text: "PROMO.Text"
+     img: "http://dummyimage.com/400x200/ccc/fff.png&text=PROMO.Image%202:1"
+  -
+   split_promo:
+     title: "PROMO.Title"
+     text: "PROMO.Text"
+     link: "styleguide.html"
+     img: "http://dummyimage.com/400x200/ccc/fff.png&text=PROMO.Image%202:1" 
+  -
+   split_promo:
+     title: "PROMO.Title"
+     text: "PROMO.Text"
+     link: "styleguide.html"
+     img: "http://dummyimage.com/400x200/ccc/fff.png&text=PROMO.Image%202:1" 
+
+#= YAML.load(File.read("#{File.basename(__FILE__,'.haml')}.yml"))
+---
+=partial('components/site-elements/header', :locals => {:selected => "Content Model"})
+=partial "components/hero/hero"
+=partial "components/split-promo/split-promo"
+=partial "components/wide-box/wide-box"
+=partial "components/square-box/square-box"

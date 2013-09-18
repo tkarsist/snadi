@@ -1,0 +1,16 @@
+p {
+  margin-left:1em;
+  margin-right:1em;
+  margin-bottom:0.5em;
+  line-height:125%;
+  @include get-fonts(1,0.5,0)
+
+  //font: 1em 'Source Sans Pro', sans-serif;
+}
+h1,h2,h3{
+    margin-top:0.3em;
+    margin-bottom:0.3em;
+    line-height:110%;
+
+    @include get-fonts(1.5,0.5,0);
+}
