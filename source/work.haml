@@ -1,0 +1,91 @@
+---
+title: "Frontpage"
+description: "Prototype with components - "
+section_title: "Kaisa Koponen"
+section_text: "Graphic & Web Designer"
+section_color2: "orange-bg"
+
+fancy_tiles_webdesign:
+  title: "Web Design"
+  group: "uksi"
+  tiles:
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+       title: "kuva1"
+
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+       title: "kuva2"
+
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+       title: "vika1"
+
+fancy_tiles_illustrations:
+  title: "Web Design"
+  tiles:
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+       title: "suva1"
+
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+    -
+     fancy_tile:
+       img: "images/work/perfecto.png"
+       link: "images/work/perfecto_etusivu.jpg"
+
+  
+ 
+#= YAML.load(File.read("#{File.basename(__FILE__,'.haml')}.yml"))
+---
+=partial('components/site-elements/header', :locals => {:selected => "Work"})
+=partial('components/fancy-tile/fancy-tile', :locals => {:fancy_tiles => data.page.fancy_tiles_webdesign})
+=partial('components/fancy-tile/fancy-tile', :locals => {:fancy_tiles => data.page.fancy_tiles_illustrations})
+

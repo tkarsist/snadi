@@ -1,0 +1,25 @@
+.person-intro{
+	width:40%;
+	p{
+		padding-left:0px;
+		padding-right:0px;
+	}
+	a{
+		text-decoration:none;
+		font-weight:bold;
+		color:$font-turquose;
+
+		:visited{}
+	}
+}
+@media #{$tablet-portrait} {
+	.person-intro{
+		width:65%;
+	}
+}
+
+@media #{$mobile-portrait} {
+	.person-intro{
+		width:100%;
+	}
+}

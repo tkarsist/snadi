@@ -7,7 +7,7 @@ header {
 }
 
 .header{
-  margin-bottom:1.5em;
+  margin-bottom:3em;
   //width:100%;
 
 }
@@ -18,7 +18,7 @@ header {
   //padding-bottom:0.15em;
   width:100%;
   padding-top:0.35em;
-  @include get-gradient($header-bg);
+  //@include get-gradient($header-bg);
 
   nav {
 
@@ -28,9 +28,10 @@ header {
       text-align: right;
       overflow: auto;
       list-style:none; 
-      font-size:1.2em;
+      font-size:1.15em;
       text-transform: uppercase;
       font-family: $font;
+      font-weight:bold;
       margin: 0;
     }
   
@@ -48,21 +49,35 @@ header {
     
     a {
       border-radius: 3px;
+      padding-left:0.3em;
+      padding-right:0.3em;
       //padding: 0.5em;
       text-decoration: none;
       margin: 0;
       display: block;
-      color: #4d4c4b;
+      color: $font-turquose;
       //color: #000000;
       letter-spacing: 0.05em;
+
+
+    }
+    a:hover{
+      color:white;
+      background:$font-turquose;
+    }
+    a:active{
+      color:$font-turquose;
+      //background:$font-turquose;
     }
     
     .selected a{
       //background: rgb(1, 136, 200);
       //color:#a4c8a1;
       //color:#ffffff ;
-      color:#ab9283;
+      color:white;
+      background:$font-turquose;
     }
+
     
   }
 }

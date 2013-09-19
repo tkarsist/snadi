@@ -1,3 +1,7 @@
+//=require vendor/jquery-1.9.1.min
+//=require "vendor/modernizr-2.6.2-custom"
+//=require "vendor/fancybox2/jquery.fancybox.pack"
+
 $(document).ready(function() {
 	
 	// Load youtube video feed
@@ -10,4 +14,20 @@ $(document).ready(function() {
 		return true;
 	});
 	
+});
+
+
+
+$(document).ready(function() {
+		$(".fancybox").fancybox(	);
+});
+
+$(".fancybox").fancybox({
+    helpers : {
+        overlay : {
+            css : {
+                'background' : 'rgba(58, 42, 45, 0.95)'
+            }
+        }
+    }
 });

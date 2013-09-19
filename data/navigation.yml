@@ -2,18 +2,15 @@
 navitems:
   -
    navitem:
-     title: "Home"
-     link: "home.html"
+     title: "About Me"
+     link: "index.html"
   -
    navitem:
-     title: "Components"
-     link: "page2.html"
+     title: "Work"
+     link: "work.html"
   -
    navitem:
-     title: "Content Model"
-     link: "page3.html"
-  -
-   navitem:
-     title: "StyleGuide"
-     link: "styleguide.html"     
+     title: "CV"
+     link: "cv.html"
+
 ---

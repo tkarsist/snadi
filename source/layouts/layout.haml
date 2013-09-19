@@ -12,15 +12,14 @@
     %meta{:charset => "utf-8"}
     %meta{:content => "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no", :name => "viewport"}    
     %title=page_title
-    
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Source+Sans+Pro|Share+Tech|Carrois+Gothic&subset=latin,latin-ext"
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic|Average+Sans|Roboto+Slab:400,700,300"
-    = javascript_include_tag "vendor/jquery-1.9.1.min.js"
-    = javascript_include_tag "vendor/modernizr-2.6.2-custom.js"
+    %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Mr+Dafoe"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Oxygen:400,700"}
+
     = javascript_include_tag "site.js"
     
     =favicon_tag "/favicon.ico"
     = stylesheet_link_tag "site"
+    = stylesheet_link_tag "vendor/jquery.fancybox"
      
   
     %body

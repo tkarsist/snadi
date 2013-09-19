@@ -5,7 +5,8 @@ $default-margin: 1em;
 
 // Fonts
 //$font: 'Share Tech', Helvetica, Arial,sans-serif;
-$font: 'Average Sans',Helvetica,Arial,sans-serif;
+$font: 'Oxygen',Helvetica,Arial,sans-serif;
+$font-cursive:'Mr Dafoe', cursive;
 
 //font-family: 'Noto Sans', sans-serif;
 //font-family: 'Average Sans', sans-serif;
@@ -49,8 +50,10 @@ $orange-bg:#d96517;
 $green-bg:#2ea712;
 
 //site
-$bgcolor: #f2f2f2;
+$bgcolor: #fff;
 $font-light-color:#f2f2f2;
 $font-darkgrey-color:#3b3b3b;
+$font-dark:#707070;
+$font-turquose:#71d2c1;
 $header-bg:lighten(#dbdbdb,15%);
 

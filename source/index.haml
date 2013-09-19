@@ -1,65 +1,29 @@
 ---
 title: "Frontpage"
 description: "Prototype with components - "
-section_title: "veikonkala.org"
-section_text: "Where things happen."
-section_image: "images/test_img/kala5.png"
-section_color: "orange-bg"
+section_title: "Kaisa Koponen"
+section_text: "Graphic & Web Designer"
+section_image: "images/kaisa.jpg"
+section_color2: "orange-bg"
 
-
-square_boxes:
-  -
-   square_box:
-     img: "images/test_img/responsive.jpg"
-     title: "RESPONSIVE DEMO"
-     text: ""
-     link: "/responsive/" 
-  -
-   square_box:
-     img: "images/test_img/responsive_proto.jpg"
-     title: "HTML PROTOTYPE"
-     text: ""
-     link: "home.html" 
-  -
-   square_box:
-     img: "images/test_img/black.jpg"
-     title: "RC"
-     text: ""
-     link: "#" 
-  -
-   square_box:
-     img: "images/test_img/black.jpg"
-     title: "ARDUINO"
-     text: ""
-     link: "#"  
-half_heros:
-  -
-   hero:
-     img: "images/test_img/reissuexceli.jpg"
-     title: "Reissuexceli"
-     text: "Calculate all your trip expenses" 
-     link: "/trip/"
-
-  -
-   hero:
-     img: "images/test_img/kerava.jpg"
-     title: "Kerava Weather"
-     link: "index.html"
-     text: "Live weather statistics from Kerava"  
-text_blocks:
-  -
-   text_block:
-     title: '<i>"Everything goes well if you do it yourself"</i>'
-     text: "-Veikonkala" 
   
  
 #= YAML.load(File.read("#{File.basename(__FILE__,'.haml')}.yml"))
 ---
-=partial('components/site-elements/header', :locals => {:selected => "Home", :noNav =>"yes"})
-=partial "components/half_hero/half_hero"
-//=partial("components/text_block/text_block", :locals => {:color => "blue-bg"})
-=partial("components/text_block/text_block")
-=partial "components/square-box/square-box"
-//%div{:style=>"padding-bottom:20em;"}
-=partial("components/veka_youtube/veka_youtube")
+=partial('components/site-elements/header', :locals => {:selected => "About Me"})
+.section
+  .person-intro
+    %p
+      %strong The site is under construction at the moment, so it may look a bit funny occasionally! Sorry!
+    %p 
+      %strong So nice of you to drop by! 
+      I’m a digital designer born and bred in Helsinki, Finland. Right now I’m looking for something new and interesting to work with. If you know what that could be, please let me know too!
+    %p I’ve been working in the digital design industry for the past 8 years, most of it in advertising. My skills and interests include graphic design, concept design, usability, illustration, animation, social media and pretty much everything else on that field.
+    %p If you like my work, please drop me a note or find out more about me:
+    %p
+      %strong kaisa.koponen@gmail.com
+      %br
+      %a{:href=>"http://www.linkedin.com/in/kaisakoponen", :target=>"_blank"}
+        www.linkedin.com/in/kaisakoponen
+
 

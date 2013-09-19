@@ -1,0 +1,29 @@
+---
+fancy_tiles:
+  title: "Kaisan kalaverkko" 
+  
+  tiles:
+    -
+      fancy_tile:
+        img: "images/test_img/5.jpg"
+        link: "images/test_img/5.jpg"
+        title: "kuva1"
+    -
+      fancy_tile:
+        img: "images/test_img/5.jpg"
+        link: "images/test_img/5.jpg"
+
+---
+%div{:class=>['group', defined?(color) ? color : nil ]}
+  .section
+    .fancy-tiles
+      -if fancy_tiles.title!=nil
+        %h2
+          =fancy_tiles.title
+      %ul    
+        - fancy_tiles.tiles.each do |s|
+          %li{:class =>['fancy-tile', 'box']}
+            %a{:href =>s.fancy_tile.link || "#",:class=>"fancybox",:rel=>fancy_tiles.group, :title =>s.fancy_tile.title}
+              %img{:src =>s.fancy_tile.img}      
+      .footer
+

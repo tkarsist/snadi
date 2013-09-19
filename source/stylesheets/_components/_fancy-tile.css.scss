@@ -1,0 +1,66 @@
+.fancy-tiles{
+  overflow:hidden;
+  margin-bottom:3em;
+  ul{
+    width:100%;
+    float:left;
+  }
+  .footer{
+    width:30%;
+    //display:block;
+    float:left;
+    border-bottom:1px dashed black;
+    @include clearfix();
+
+  }
+  h2{
+    text-transform:uppercase;
+    @include get-fonts(1.25,0.5,0);
+    font-weight:normal;
+
+  }
+  .fancy-tile {
+    padding-top:1.5em;
+    padding-bottom:1.5em;
+
+    //Timo K special hack
+  	//width:23.8%;
+  	@include span-columns(3,12);
+  	@include nth-omega(4n);
+  	position:relative;
+  	float:left;
+  	overflow:hidden;	
+
+    
+    img {
+      width:100%; 
+    }
+  }
+}
+
+@media #{$tablet-portrait} {
+
+  .fancy-tiles{
+    .fancy-tile{
+      //Timo K special hack
+      @include span-columns(6,12);
+      @include remove-nth-omega(6n);
+      @include nth-omega(2n);
+    	
+    }
+  }
+
+}
+
+@media #{$mobile-portrait} {
+
+  .fancy-tiles{
+    .fancy-tile{
+      //Timo K special hack
+      @include span-columns(12 omega,12);
+    	background:none;
+    	padding-bottom:1em;
+    }
+  }
+
+}

@@ -1,0 +1,27 @@
+---
+title: "Kaisa Koponen - CV"
+description: "Hahha"
+section_title: "Kaisa Koponen"
+section_text: "Graphic & Web Designer"
+section_color2: "orange-bg"
+
+  
+ 
+#= YAML.load(File.read("#{File.basename(__FILE__,'.haml')}.yml"))
+---
+=partial('components/site-elements/header', :locals => {:selected => "CV"})
+.section
+  .person-intro
+    %p
+      If you want to more about my work and education, you can visit my LinkedIn profile:
+      %a{:href=>"http://www.linkedin.com/in/kaisakoponen", :target=>"_blank"}
+        www.linkedin.com/in/kaisakoponen
+    %p
+      You can also load my full CV (pdf) from the following links: 
+      %a{:href=>"http://www.linkedin.com/in/kaisakoponen", :target=>"_blank"}
+        CV in English
+      %br  
+      %a{:href=>"http://www.linkedin.com/in/kaisakoponen", :target=>"_blank"}
+        CV in Finnish
+
+  
