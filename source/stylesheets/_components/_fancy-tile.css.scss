@@ -25,8 +25,8 @@
 
     //Timo K special hack
   	//width:23.8%;
-  	@include span-columns(3,12);
-  	@include nth-omega(4n);
+  	@include span-columns(2,12);
+  	@include nth-omega(6n);
   	position:relative;
   	float:left;
   	overflow:hidden;	
@@ -43,9 +43,9 @@
   .fancy-tiles{
     .fancy-tile{
       //Timo K special hack
-      @include span-columns(6,12);
+      @include span-columns(3,12);
       @include remove-nth-omega(6n);
-      @include nth-omega(2n);
+      @include nth-omega(4n);
     	
     }
   }
@@ -57,7 +57,9 @@
   .fancy-tiles{
     .fancy-tile{
       //Timo K special hack
-      @include span-columns(12 omega,12);
+      @include span-columns(6,12);
+      @include remove-nth-omega(4n);
+      @include nth-omega(2n);
     	background:none;
     	padding-bottom:1em;
     }
