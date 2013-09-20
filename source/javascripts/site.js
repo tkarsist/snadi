@@ -19,15 +19,18 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-		$(".fancybox").fancybox(	);
-});
-
+		//$(".fancybox").fancybox(	);
 $(".fancybox").fancybox({
     helpers : {
         overlay : {
             css : {
-                'background' : 'rgba(58, 42, 45, 0.95)'
+                'background' : 'rgba(113, 210, 193, 0.2)'
             }
         }
-    }
+    }, nextClick: "true"
 });
+
+
+});
+
+
