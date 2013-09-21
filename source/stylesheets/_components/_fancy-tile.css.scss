@@ -31,14 +31,28 @@
   	float:left;
   	overflow:hidden;	
 
-    
+    img{
+      opacity: 1;
+      -webkit-transform: scale(1,1);
+      -webkit-transition-timing-function: ease-out;
+      -webkit-transition-duration: 250ms;
+      -moz-transform: scale(1,1);
+      -moz-transition-timing-function: ease-out;
+      -moz-transition-duration: 250ms;
+    } 
+    img:hover{
+      opacity: .7;
+      -webkit-transform: scale(1.05,1.07);
+      -webkit-transition-timing-function: ease-out;
+      -webkit-transition-duration: 250ms;
+      -moz-transform: scale(1.2,1.7);
+      -moz-transition-timing-function: ease-out;
+      -moz-transition-duration: 250ms;
+      //position: relative;
+      //z-index: 99;
+    }   
     img {
       width:100%;
-      /*-o-transition: all 0.75s ease-in-out;
-      -ms-transition: all 0.75s ease-in-out;
-      -moz-transition: all 0.75s ease-in-out;
-      -webkit-transition: all 0.75s ease-in-out;
-      */
     }
   }
 }
