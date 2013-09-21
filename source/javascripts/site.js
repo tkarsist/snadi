@@ -1,6 +1,7 @@
 //=require vendor/jquery-1.9.1.min
 //=require "vendor/modernizr-2.6.2-custom"
 //=require "vendor/fancybox2/jquery.fancybox.pack"
+// //=require "vendor/fancybox2/jquery.fancybox-thumbs"
 
 $(document).ready(function() {
 	
@@ -24,11 +25,16 @@ $(".fancybox").fancybox({
     helpers : {
         overlay : {
             css : {
-                'background' : 'rgba(113, 210, 193, 0.2)'
+                'background' : 'rgba(113, 210, 193, 0.3)'
             }
-        }
-    }, nextClick: "true",
-    
+        },
+        thumbs	: {
+				width	: 50,
+				height	: 50
+		}
+    }, 
+    nextClick: "true",
+
 });
 
 
