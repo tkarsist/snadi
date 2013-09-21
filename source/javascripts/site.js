@@ -27,7 +27,8 @@ $(".fancybox").fancybox({
                 'background' : 'rgba(113, 210, 193, 0.2)'
             }
         }
-    }, nextClick: "true"
+    }, nextClick: "true",
+    
 });
 
 
