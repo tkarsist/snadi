@@ -1,5 +1,5 @@
 .person-intro{
-	width:40%;
+	width:45%;
 	p{
 		padding-left:0px;
 		padding-right:0px;
@@ -11,6 +11,11 @@
 
 		:visited{}
 	}
+	a:hover{
+      color:white;
+      background:$font-turquose;
+    }
+
 }
 @media #{$tablet-portrait} {
 	.person-intro{

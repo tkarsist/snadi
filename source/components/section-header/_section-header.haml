@@ -6,7 +6,8 @@ section_text: "Where things happen."
 %div{:class=>['section-header', data.page.section_color||"" ]}
   .section
     %div{:class =>'copy'}
-      %h1= data.page.section_title
+      %a{:href=>"index.html"}
+        %h1= data.page.section_title
       %p= data.page.section_text
     %div.visual
       -if data.page.section_image!=nil
