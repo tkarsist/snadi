@@ -24,6 +24,6 @@ fancy_tiles:
         - fancy_tiles.tiles.each do |s|
           %li{:class =>['fancy-tile', 'box']}
             %a{:href =>s.fancy_tile.link || "#",:class=>"fancybox",:rel=>fancy_tiles.group, :title =>s.fancy_tile.title}
-              %img{:src =>s.fancy_tile.img}      
+              %img{:src =>s.fancy_tile.img, :alt=>s.fancy_tile.title}      
       .footer
 
