@@ -28,6 +28,9 @@ $(".fancybox").fancybox({
                 'background' : 'rgba(255, 255, 255, 0.6)'
             }
         },
+        title: {
+        	type: 'inside'
+    	},
         thumbs	: {
 				width	: 50,
 				height	: 50
