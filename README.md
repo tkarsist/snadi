@@ -1,4 +1,4 @@
-# Middleman 3.0.x Project Template: HTML5 Boilerplate HAML, Normalize, Susy, Sprockets Includes
+#Middleman 3.0.x Project Template: HTML5 Boilerplate HAML, Normalize, Susy, Sprockets Includes
 
 HTML5 Boilerplate HAML is The [HTML5 Boilerplate 4.0](http://html5boilerplate.com/) adapted as a HAML [Middleman 3.x](http://middlemanapp.com/) project template with [Susy 1.0](http://susy.oddbird.net/) responsive grids ready to go, content using [Markdown](http://daringfireball.net/projects/markdown/), [SCSS](http://sass-lang.com/) organized with [SMACSS](http://smacss.com/), Coffeescript, Sprockets and more.
 
